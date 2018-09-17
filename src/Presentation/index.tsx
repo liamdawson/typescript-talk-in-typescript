@@ -16,10 +16,11 @@ export class PresentationComponent extends React.Component<IProps> {
 
         return (
             <div className='Presentation'>
-                {slides && slides[displayedSlide - 1] &&
-                <div className='Presentation-slide Presentation-slide--current'>
-                    {slides[displayedSlide - 1]}
-                </div>}
+                {slides.map((slide, slideIndex) => <div
+                    key={`slideContent-${slideIndex}`}
+                    className={`Presentation-slide Presentation-slide--${slideIndex + 1 === displayedSlide ? 'current' : 'hidden'}`}>
+                        {slide}
+                    </div>)}
             </div>
         );
     }
