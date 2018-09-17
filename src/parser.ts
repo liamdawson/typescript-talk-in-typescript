@@ -15,23 +15,6 @@ export class SourceTransformer {
     }
 
     public parse(src: string) {
-        src = `
-# This should be a H1 on the first slide
-
----
-
-* This
-* should
-* be
-  * a
-  * list
-
----
-
-## Slide 3
-
-### It works`;
-
         const tokens = this.md.parse(src, {});
 
         const tokenPages = tokens.reduce((collection, next) => {
@@ -45,11 +28,5 @@ export class SourceTransformer {
         }, [[]] as Remarkable.Token[][]);
 
         return tokenPages.map(innerTokens => this.md.renderer.render(innerTokens, this.mdConfig, {}));
-
-        /*
-        const transformerResult = this.md.render(src);
-
-        return `<section>${transformerResult}</section>`;
-        */
     }
 }
