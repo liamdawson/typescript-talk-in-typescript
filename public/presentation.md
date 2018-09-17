@@ -5,10 +5,11 @@
 * This
 * should
 * be
-  + a
-  + list
+  * a
+  * list
 
 ---
 
-# Slide 3!
-### It works?!?!?!?
+## Slide 3
+
+### It works

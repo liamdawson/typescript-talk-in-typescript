@@ -1,22 +1,16 @@
-import * as keycode from 'keycode';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import Presentation from './Presentation';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import Home from "./Home";
+import { SourceTransformer } from "./parser";
 
-const nextKeys = [
-  keycode.codes.down,
-  keycode.codes["page down"],
-  keycode.codes.right,
-  keycode.codes.space,
-];
-const prevKeys = [
-  keycode.codes.left,
-  keycode.codes["page up"],
-  keycode.codes.up,
-  keycode.codes.backspace,
-];
+const parser = new SourceTransformer();
+const slides = parser.parse("");
 
 ReactDOM.render(
-  <Presentation nextKeyCodes={nextKeys} prevKeyCodes={prevKeys} />,
-  document.getElementById('root') as HTMLElement
+  <Home
+    slides={slides.map((slide, index) => (
+      <div key={`slide-${index}`} dangerouslySetInnerHTML={{ __html: slide }} />
+    ))}
+  />,
+  document.getElementById("root") as HTMLElement
 );
