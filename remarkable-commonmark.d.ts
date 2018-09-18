@@ -1,5 +1,5 @@
-declare module "remarkable/lib/configs/commonmark" {
-  import { Options } from 'remarkable';
+declare module "markdown-it/lib/presets/commonmark" {
+  import { Options } from 'markdown-it';
 
   export default Options;
 }
