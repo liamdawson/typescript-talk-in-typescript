@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Alegreya:700|Open+Sans:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:700|Open+Sans:400,400i,700,700i|Roboto+Mono:400,400i,700,700i');
 
 html body {
   font-family: 'Open Sans', sans-serif;
@@ -26,7 +26,18 @@ html body {
 .Presentation-slide h4,
 .Presentation-slide h5,
 .Presentation-slide h6 {
-  font-family: 'Alegreya', serif;
+  font-family: 'Merriweather', serif;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 75%;
+  line-height: 1.3;
+}
+
+pre[class*="language-"] {
+  box-shadow: 0 0.2em 1rem rgba(44, 44, 44, 0.5);
 }
 
 div.code-block pre {

@@ -2,13 +2,28 @@ html {
   font-size: 2.5em;
 }
 
-.Presentation-slide {
-  height: 100vh;
+.Presentation {
   width: 100vw;
-  display: flex;
+  height: 100vh;
   position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.Presentation-slide {
+  width: 100%;
+  max-width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Presentation-slide img {
+  max-height: 80vh;
 }
 
 .Presentation-slide--hidden {

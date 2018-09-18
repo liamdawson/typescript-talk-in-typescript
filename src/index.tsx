@@ -1,9 +1,13 @@
-import 'normalize.css';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import Home from "./Home";
-import './index.css';
 import { SourceTransformer } from "./parser";
+
+import 'normalize.css';
+import './index.css';
+
+import './code.css';
+import './presentation.css';
 
 const parser = new SourceTransformer();
 
