@@ -1,18 +1,12 @@
-# This should be a H1 on the first slide
+# Practical TypeScript
+
+## ... how to make better mistakes
 
 ---
 
-* This
-* should
-* be
-  * a
-  * list
+# TypeScript
 
----
-
-## Slide 3
-
-### It works
+is a Microsoft-owned **superset** of Javascript.
 
 ---
 

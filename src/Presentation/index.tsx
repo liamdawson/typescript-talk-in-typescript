@@ -59,8 +59,10 @@ export class PresentationComponent extends React.Component<IProps> {
     private onDocumentKeyPress(e: Event) {
         if (e instanceof KeyboardEvent) {
             if (this.props.nextKeyCodes && this.props.nextKeyCodes.indexOf(e.keyCode) !== -1) {
+                e.preventDefault();
                 this.tryChangeSlide(+1);
             } else if(this.props.prevKeyCodes && this.props.prevKeyCodes.indexOf(e.keyCode) !== -1) {
+                e.preventDefault();
                 this.tryChangeSlide(-1);
             }
         }
