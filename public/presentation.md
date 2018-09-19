@@ -2,11 +2,45 @@
 
 ## ... how to make better mistakes
 
+###### and why I don't handwrite more
+
 ---
 
 # TypeScript
 
 is a Microsoft-owned **superset** of Javascript.
+
+---
+
+Most* modern web frontend work is done via compiling standards
+that don't yet exist in older browsers to cross-platform JavaScript.
+
+\* citation needed
+
+---
+
+![Fictional developer to compiler to instructions flow involving wizards.](./img/compilers-and-wizards.png)
+
+---
+
+TypeScript provides a compiler that can handle standard JavaScript, and prepare it for older targets.
+
+It also understands some of its own syntax to add compile-time checks.
+
+---
+
+![Compile-time checks warn you about a potential problem ahead of time.](./img/compiler-errors.png)
+
+---
+
+![Otherwise, you only find out when the problem actually happens.](./img/fish-tree.png)
+
+---
+
+Great solutions exist for using TypeScript in React applications
+among other destinations.
+
+Why do I like it so much?
 
 ---
 
@@ -149,6 +183,39 @@ testFlag('gamification').toUpperCase();
 
 ---
 
+### Reasons I like TypeScript:
+
+# The community
+
+---
+
+Using types safely with untyped libraries involves manually writing extra declarations.
+
+---
+
+DefinitelyTyped is a community project that covers 4,924 external libraries, at time of writing.
+
+---
+
+```shell
+yarn add react-router-dom
+yarn add -D @types/react-router-dom
+```
+
+---
+
+```typescript
+declare module "markdown-it/lib/presets/commonmark" {
+  import { Options } from 'markdown-it';
+
+  export default Options;
+}
+```
+
+Not particularly onerous to add missing types if necessary.
+
+---
+
 ### Reasons I (sorta) like TypeScript:
 
 # It's still JavaScript
@@ -159,8 +226,33 @@ testFlag('gamification').toUpperCase();
 
 ---
 
+Still no `?.` operator, for example.
+
+---
+
 ![You can change at your own page, whether that's one piece at a time, new things only, all at once.](./img/gradual-conversion.png)
 
 ---
 
-migrating using jscheck etc.
+Add TypeScript support now, migrate whenever you want.
+
+Valid JavaScript is valid* TypeScript.
+
+---
+
+# Completely fair comparison
+
+---
+
+![JavaScript is like a phoenix. It's made of fire (which is awesome) but also can burn you. It can go anywhere. Sometimes you need to burn it to ashes and start again.](./img/javascript.png)
+
+---
+
+![TypeScript is like a unicorn. It can't fly, but it's less hurty (aside from a few pointy bits).](./img/typescript.png)
+
+---
+
+# Fin.
+
+#### Liam Dawson   
+### @liamdaws
